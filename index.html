@@ -1,21 +1,153 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta name="keywords" content="catsup tomato cat" />
-    <meta name="description" content="Catsup the tomato cat by ALPHA-ZERO / automatic-spirit" />
-    <meta name="language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="catsup, tomato, cat, alpha-zero, azezaroo, automatic-spirit, stickers" />
+    <meta name="description" content="The collection of Catsup & Co stickers and emotes by ALPHA-ZERO / AUTOMATICSPIRIT" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <title>CATSUP & CO DIRECTORY - ALPHA-ZERO</title>
+    <title>CATSUP & CO DIRECTORY | ALPHA-ZERO</title>
 	<link rel=icon href="favicon.png" type="image/png">
 
 	<style type="text/css">
-		body {padding: 0; margin: 0;}
-        p, h1, h2, h3, h4, h5, h6 {}
+        @font-face {
+            font-family: 'Schoolbell';
+            font-style: normal;
+            font-weight: 400;
+            src:
+                local('Schoolbell Regular'), local('Schoolbell-Regular'), url(Schoolbell-Regular.ttf);
+        }
 
-    .container {}
+        @font-face {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Oswald Medium'), local('Oswald-Medium'), url(Oswald-Medium.ttf);
+        }
+
+		body {padding: 0; margin: 0;}
+        p, h1, h2, h3, h4, h5, h6 {margin 0; padding 0;}
+
+    body {
+        background: url(bg-top.png) repeat-x top center, url(bd-pattern.png) repeat center;
+        font-family: 'Schoolbell', cursive;
+        color: rgba(32,32,32,1);
+    }
+
+    header{display: block;}
+    h1 {font-family: Oswald; font-weight: 500; text-align: center;}
+
+    .container {
+        display: block;
+        /* background-color: rgba(230,0,0,.1); */
+        color: #521c1f
+    }
+    #opening {padding: 0 5px;}
+    #focus {
+        margin: 0 5px;
+        border: solid 1px rgba(40,40,40,.1);
+        border-radius: 8px;
+        background-color: rgba(255,255,255,.8);
+        clear: both;
+    }
+    #focus>img {width: 100%; max-width: 250px;}
+    #gallery {
+        /* display: flex; */
+        display: inline-block;
+        margin: 0; padding: 0;
+        /* background-color: rgba(230,0,0,.1); */
+    }
+    .list-item, .list-item-e {
+            list-style: none;
+            overflow: hidden;
+            display: block;
+            padding: 4px; margin: 5px;
+            border: solid 1px rgba(40,40,40,.1);
+            border-radius: 8px;
+            background-color: rgba(255,255,255,.8);
+            transition: opacity 1s;
+            cursor: pointer;
+
+            object-fit: contain;
+            float: left;
+            clear: none;
+    }
+    .list-item {
+        /* max-width: 90px; max-height: 90px; /* make size depending on canvas */
+        width: 90px; height: 90px;
+        /* max-width: 100%; max-height: 100%; */
+        opacity: .70;
+    }
+    .list-item-e {
+        clear: left;
+        height: 200px; width: 200px;
+        /* max-width: 90px; max-height: 90px; /* make size depending on canvas */
+    }
+    .list-item:hover, .list-item:focus {opacity: 1; transition: opacity .22s;}
+
+    #focus {; padding: 4px;}
+    .shop-ex { display: box; text-align: center; vertical-align: center;}
+    .shop-ex > a {
+        display: inline-block;
+        padding: 2px 6px;
+        border-radius: 3px;
+        text-decoration: none;
+        border: 1px solid white;
+    }
+    .shop-ex>a {transition: background-color 1s, color 1s;} .shop-ex>a:hover, .shop-ex>a:focus {background-color: white; transition: background-color .22s, color .22s;}
+    .shop-ex>.line {border-color: #0fab10; color: white; background-color: #0fab10;}
+    .shop-ex>.line:hover, .shop-ex>.line:focus { border-color: #0fab10; color: #0fab10;}
+
+    footer {
+        display: block;
+        clear: both;
+        margin: 8px;
+        /* background-color: rgba(230,0,0,.1); */
+        text-align: right;
+    }
+    footer>a, footer>a:visited {
+        text-decoration: none; display: inline-block;
+        padding: 3px 7px;
+        background-color: rgba(130,130,130,0);
+        border-radius: 4px;
+        border: 1px solid white;
+        color: #c02334;
+        transition: background-color 1s, color 1s;
+    }
+    footer>a:hover, footer>a:focus {color: white; background-color: #c02334; transition: background-color .22s, color .22s;}
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        .container {width: 550px; margin-left: auto; margin-right: auto;}
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .container {width: 770px;}
+        #focus {}
+        #gallery {clear: none;}
+
+        footer {margin: 16px;}
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .container {width: 840px;}
+        .list-item {width: 120px; height: 120px;}
+        .list-item-e {width: 260px; height: 260px;}
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        .container {margin: 0 auto; width: 980px;}
+    }
 	</style>
 
+    <base target="_blank">
 </head>
 <body>
     <!-- I want this to be like a huge list of all my available catsup stickers,
@@ -33,10 +165,50 @@
     stickers  themselves having much  descriptions  but i can  think so for  the
     external links-->
 	<header id="">
-        <div>meow</div>
+        <h1>Catsup !</h1>
     </header>
 	<section class="container">
+        <div id="opening">A collection of collectibles of catsup the tomato-cat.</div>
+        <div id="gallery">
+            <img id="expandedImg" class="list-item-e" style="display: none;" src="" />
+            <img class="list-item" src="images/s1-01.png" alt="Set 01 No. 1<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-02.png" alt="Set 01 No. 2<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-03.png" alt="Set 01 No. 3<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-04.png" alt="Set 01 No. 4<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-05.png" alt="Set 01 No. 5<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-06.png" alt="Set 01 No. 6<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-07.png" alt="Set 01 No. 7<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-08.png" alt="Set 01 No. 8<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-09.png" alt="Set 01 No. 9<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-10.png" alt="Set 01 No. 10<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-11.png" alt="Set 01 No. 11<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-12.png" alt="Set 01 No. 12<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-13.png" alt="Set 01 No. 13<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-14.png" alt="Set 01 No. 14<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-15.png" alt="Set 01 No. 15<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <img class="list-item" src="images/s1-16.png" alt="Set 01 No. 16<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
+            <!-- <img class="list-item" src="" alt="" onclick="pullImage(this);"/> -->
+        </div>
+        <div id="focus" style="display: none;">
+            <!-- <img id="expandedImg" style="" /> -->
+            <div id="imgdesc"></div>
+        </div>
     </section>
-    <footer></footer>
+    <footer>
+        <!--    include an email to correspond  and a link back home, etc    -->
+        <a style="float: left;" href="https://www.alpha-zero.design/" target="_self">&crarr;RTN</a>
+        <a href="https://www.alpha-zero.design/contact.html" target="_self">alpha-zero ; automatic-spirit</a>
+    </footer>
+    <script>
+        function pullImage(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgdesc");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.style.display = "block";
+            imgText.parentElement.style.display ="block";
+            // expandImg.parentElement.style.display = "block";
+        }
+    </script>
 </body>
 </html>
