@@ -9,7 +9,7 @@
     <title>CATSUP & CO DIRECTORY | ALPHA-ZERO</title>
 	<link rel=icon href="favicon.png" type="image/png">
 
-	<style type="text/css">
+	<style>
         @font-face {
             font-family: 'Schoolbell';
             font-style: normal;
@@ -26,7 +26,7 @@
         }
 
 		body {padding: 0; margin: 0;}
-        p, h1, h2, h3, h4, h5, h6 {margin 0; padding 0;}
+        p, h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0;}
 
     body {
         background: url(bg-top.png) repeat-x top center, url(bd-pattern.png) repeat center;
@@ -86,7 +86,7 @@
     .list-item:hover, .list-item:focus {opacity: 1; transition: opacity .22s;}
 
     #focus {; padding: 4px;}
-    .shop-ex { display: box; text-align: center; vertical-align: center;}
+    .shop-ex { display: block; text-align: center; vertical-align: center;}
     .shop-ex > a {
         display: inline-block;
         padding: 2px 6px;
@@ -164,13 +164,13 @@
     when you click  on them.  Maybe clickable tags.  I can't  really imagine the
     stickers  themselves having much  descriptions  but i can  think so for  the
     external links-->
-	<header id="">
+	<header>
         <h1>Catsup !</h1>
     </header>
 	<section class="container">
         <div id="opening">A collection of collectibles of catsup the tomato-cat.</div>
         <div id="gallery">
-            <img id="expandedImg" class="list-item-e" style="display: none;" src="" />
+            <img id="expandedImg" class="list-item-e" style="display: none;" src="" alt="!"/>
             <picture>
                 <source type="image/webp" srcset ="images/S1-01.webp"/>
                 <img class="list-item" src="images/S1-01.png" alt="Set 01 No. 1<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
