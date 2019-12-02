@@ -1,264 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="catsup, tomato, cat, alpha-zero, azezaroo, automatic-spirit, stickers" />
-    <meta name="description" content="The collection of Catsup & Co stickers and emotes by ALPHA-ZERO / AUTOMATICSPIRIT" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="UTF-8">
 
-    <title>CATSUP & CO DIRECTORY | ALPHA-ZERO</title>
-	<link rel=icon href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="catsup, tomato, cat, tomato-cat, alpha-zero, azezaroo, automatic-spirit, stickers" />
+  <meta name="description" content="The collection and directory to find all things Catsup & Co. Stickers and emotes by ALPHA-ZERO / AUTOMATICSPIRIT" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<style>
-        @font-face {
-            font-family: 'Schoolbell';
-            font-style: normal;
-            font-weight: 400;
-            src:
-                local('Schoolbell Regular'), local('Schoolbell-Regular'), url(Schoolbell-Regular.ttf);
-        }
+  <title>CATSUP & CO DIRECTORY | ALPHA-ZERO</title>
 
-        @font-face {
-            font-family: 'Oswald';
-            font-style: normal;
-            font-weight: 500;
-            src: local('Oswald Medium'), local('Oswald-Medium'), url(Oswald-Medium.ttf);
-        }
+  <link rel=icon href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <!-- <link rel="stylesheet" href="glam.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet"> -->
 
-		body {padding: 0; margin: 0;}
-        p, h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0;}
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,700&display=swap');
+    @font-face {
+      font-family: "Ki Gothic";
+      src: url(K_Gothic.ttf) format("truetype");
+    }
+    :root {}
 
     body {
-        background: url(bg-top.png) repeat-x top center, url(bd-pattern.png) repeat center;
-        font-family: 'Schoolbell', cursive;
-        color: rgba(32,32,32,1);
+      margin: 0; padding: 0;
+      /* color: #2d2d2d; */
+      color: #f5f5f5;
+    }
+    p, h1, h2, h3, h4, h5, h6 {}
+    p {margin:8px 0;}
+    a {
+      text-decoration: none;
+      transition: 1s color;
+    }
+    a:hover, a:focus {
+      color: white;
+      transition: .2s color;
     }
 
-    header{display: block;}
-    h1 {font-family: Oswald; font-weight: 500; text-align: center;}
+    body {
+      font-family: 'K Gothic', cursive;
+      /* background-color: #f5f5f5; */
+      background: url(images/tmtbackdrop.png);
+    }
 
-    .container {
-        display: block;
-        /* background-color: rgba(230,0,0,.1); */
-        color: #521c1f
+    header {
+      display: flex;
+      margin: 8px auto 16px;
+      justify-content: center;
+      align-items: center;
     }
-    #opening {padding: 0 5px;}
-    #focus {
-        margin: 0 5px;
-        border: solid 1px rgba(40,40,40,.1);
-        border-radius: 8px;
-        background-color: rgba(255,255,255,.8);
-        clear: both;
+    nav {}
+    header .linkblock {
+      font-family: 'Josefin Slab', serif;
     }
-    #focus>img {width: 100%; max-width: 250px;}
-    #gallery {
-        /* display: flex; */
-        display: inline-block;
-        margin: 0; padding: 0;
-        /* background-color: rgba(230,0,0,.1); */
+    header img.htitle {
+      order: 2; /* flexbox align */
+      height: 100px;
+      margin-left:8px; margin-right: 8px;
     }
-    .list-item, .list-item-e {
-            list-style: none;
-            overflow: hidden;
-            display: block;
-            padding: 4px; margin: 5px;
-            border: solid 1px rgba(40,40,40,.1);
-            border-radius: 8px;
-            background-color: rgba(255,255,255,.8);
-            transition: opacity 1s;
-            cursor: pointer;
+    header a{
+      color: #bf2234;
+    }
 
-            object-fit: contain;
-            float: left;
-            clear: none;
+    .stick {
+      max-width: 800px;
+      margin-left: auto; margin-right: auto;
     }
-    .list-item {
-        /* max-width: 90px; max-height: 90px; /* make size depending on canvas */
-        width: 90px; height: 90px;
-        /* max-width: 100%; max-height: 100%; */
-        opacity: .70;
+    .butter {
+      width: 100%;
+      background-color: #f5f5f5;
     }
-    .list-item-e {
-        clear: left;
-        height: 200px; width: 200px;
-        /* max-width: 90px; max-height: 90px; /* make size depending on canvas */
-    }
-    .list-item:hover, .list-item:focus {opacity: 1; transition: opacity .22s;}
 
-    #focus {; padding: 4px;}
-    .shop-ex { display: block; text-align: center; vertical-align: center;}
-    .shop-ex > a {
-        display: inline-block;
-        padding: 2px 6px;
-        border-radius: 3px;
-        text-decoration: none;
-        border: 1px solid white;
+    .comicpost {
+      display: flex;
+      flex-direction:column;
+      margin: 0 6%;
+      /* border-radius: 10px;
+      border: 1px solid rgba(0,0,0,.67); */
     }
-    .shop-ex>a {transition: background-color 1s, color 1s;} .shop-ex>a:hover, .shop-ex>a:focus {background-color: white; transition: background-color .22s, color .22s;}
-    .shop-ex>.line {border-color: #0fab10; color: white; background-color: #0fab10;}
-    .shop-ex>.line:hover, .shop-ex>.line:focus { border-color: #0fab10; color: #0fab10;}
+    .comicpost>img {
+      object-fit:cover;
+      max-height: 320px;
+      border-radius: 8px 8px 0 0;
+    }
+    .comicpost-desc {
+      padding: 8px;
+      color: #f5f5f5;
+      background-color: rgba(10, 6, 16, 0.7);
+      border-radius: 0 0 8px 8px;
+    }
+    .comicpost-linkblock {
+      display:box;
+    }
+    .comicpost-linkblock>a {
+      display: inline-block;
+      width:32px; height:32px; margin:4px;
+      background-image: url(images/sprite.png);
+      background-size:128px;
+      opacity: .5;
+      transition: opacity 1s;
+      filter:grayscale(1);
+    }
+    a.active {filter:grayscale(0);}
+    .clb-webtoons {background-position:0 -64px;}
+    .clb-tapas {background-position:-32px -64px;}
+    .comicpost-linkblock>a.active:hover, .comicpost-linkblock>a.active:focus {
+      opacity: 1;
+      transition: opacity .1s;
+    }
+
+    /* swiperjs  */
+
+    .swiper-container {
+      /* height: 600px; max-width: 800px; */
+      width: 100%;
+    }
+    .swiper-wrapper {}
+    .swiper-slide {
+      margin: 5px 0;
+      text-align: center;
+      background-color: #f5f5f5;
+      filter: grayscale(1);
+      transition: filter .5s;
+    }
+    .swiper-button-prev {transition: left .5s;}
+    .swiper-button-next {transition: right .5s;}
+    .swiper-slide::before {
+      display: block; content:""; background-image: url(images/sect-trim-b.png);
+      height: 10px; position: relative; top: -5px;
+    }
+    .swiper-slide::after {
+      display: block; content:""; background-image: url(images/sect-trim-a.png);
+      height: 5px; position: relative; top:5px;
+    }
+    .swiper-slide-active {filter:grayscale(0);}
+    /* .swiper-slide:nth-child(odd) {background-color:rgba(0,0,0,.03)} */
+      /* swiper end */
+      /* swiper content begin */
+
+    figure {
+      position: static;
+      display: inline-block;
+      margin: 4px auto; height: 100%;
+    }
+    figcaption{
+      position: absolute;
+      bottom: 10%; left: 50%;
+      padding: 8px;
+      background-color: rgba(0,0,0,.34);
+      border-radius: 8px;
+      z-index: 10;
+      transform:translate(-50%, -50%);
+      color: white;
+    }
+    figure img {
+      display:block;
+      max-width: 100%; max-height: 720px;
+      filter:drop-shadow(0px 4px 4px #000000cf);
+    }
+    figcaption div.linkrow {display: block;}
+    div.linkrow>a {display: inline-block; background-repeat: none; background-size:128px;}
+    div.linkrow>a {width:32px; height:32px; transition: transform .2s}
+    div.linkrow>a.line-ext {background-image: url(images/sprite.png);}
+    div.linkrow>a.inactive {filter:grayscale(1);}
+    .linkrow>a:hover, .linkrow>a:focus {transform:scale(1.2)}
+      /* swiper content end */
+
+    #character-list {
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    #character-list>img {
+      width: ; height: ;
+      filter:brightness(100);
+    }
+    #contactbar {display: flex; flex-wrap:wrap; justify-content: center;margin-bottom: 8px;}
+    #contactbar {}
+    #contactbar>a {padding:6px; margin: 4px 4px;transition: opacity 0.3s; color: #bf2234; opacity: .75;}
+    #contactbar>a.spritesh {
+      width:20px; height:20px;
+      background-image: url(images/sprite.png);
+      background-size:128px;
+    }
+    #contactbar>a.twitter {background-position: -32px 0;}
+    #contactbar>a.instagr {background-position: 0px -32px;}
+    #contactbar>a.emailbar {
+      background-color: rgba(200,200,200,.8);
+      border-radius:32px;
+      padding-left: 16px; padding-right: 16px;
+    }
+    #contactbar>a:hover, #contactbar>a:focus {opacity:1;}
 
     footer {
-        display: block;
-        clear: both;
-        margin: 8px;
-        /* background-color: rgba(230,0,0,.1); */
-        text-align: right;
+      display: flex;
+      align-items: flex-end;
+      margin-top:-50px; margin-bottom: 16px;
+      font-family: 'Josefin Slab', serif;
     }
-    footer>a, footer>a:visited {
-        text-decoration: none; display: inline-block;
-        padding: 3px 7px;
-        background-color: rgba(130,130,130,0);
-        border-radius: 4px;
-        border: 1px solid white;
-        color: #c02334;
-        transition: background-color 1s, color 1s;
+    footer a{color: #bf2234;}
+    footer div.creditblock {display: block;flex-grow:1;}
+    footer>a.fran {
+      float: right;
+      display: block;
+      width: 100px; height: 100px;
+      background: url('images/fran.png') no-repeat;
     }
-    footer>a:hover, footer>a:focus {color: white; background-color: #c02334; transition: background-color .22s, color .22s;}
+    footer>a.fran:hover, a.fran:focus {background-image: url('images/fran-hover.png');}
 
-    /* Extra small devices (phones, 600px and down) */
-    @media only screen and (max-width: 600px) {
+    @media ( max-width: 360px ) {
+      .comicpost>img {height: auto; width: auto;}
     }
 
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-        .container {width: 550px; margin-left: auto; margin-right: auto;}
+    @media ( min-width:540px ) {
+      .swiper-button-prev {color: #8e000a;}
+      .swiper-button-next {color: #8e000a;}
+    }
+    @media ( min-width:600px ) {
+      .comicpost {
+        flex-direction:row;
+      }
+      .comicpost>img {
+        width: 50%;
+        max-height:280px;
+        border-radius: 8px 0 0 8px;
+      }
+      .comicpost-desc {flex-grow:1;
+      border-radius: 0 8px 8px 0;}
     }
 
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-        .container {width: 770px;}
-        #focus {}
-        #gallery {clear: none;}
-
-        footer {margin: 16px;}
+    @media ( min-width:800px ) {}
+    @media ( min-width:900px ) {
+      .swiper-button-prev {left: 10%;}
+      .swiper-button-next {right: 10%;}
     }
-
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-        .container {width: 840px;}
-        .list-item {width: 120px; height: 120px;}
-        .list-item-e {width: 260px; height: 260px;}
+  </style>
+  <style>
+    /* Swiperjs theme overrides */
+    :root {
+      --swiper-theme-color: white;
     }
-
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-        .container {margin: 0 auto; width: 980px;}
-    }
-	</style>
-
-    <base target="_blank">
+  </style>
 </head>
 <body>
-    <!-- I want this to be like a huge list of all my available catsup stickers,
-    maybe you can filter them but I want it to be a grid based page with certain
-    blocks being external links to outside sources where you can find catsup.-->
-    <!-- what should i do about people ripping catsup from here?
-    I think the most basic thing I can do is just have these pictures be fairly
-    low quality. Not good enough for print but I should be fine with the market-
-    ting if anything from that. -->
-    <!-- The sizes should be big enough  for a nice thumbnail I don't want these
-    squares being too big anyway. at most 250x250 -->
-    <!-- filtering and gallery logic
-    should the thumbnails contain text at all?  maybe not but include text maybe
-    when you click  on them.  Maybe clickable tags.  I can't  really imagine the
-    stickers  themselves having much  descriptions  but i can  think so for  the
-    external links-->
-	<header>
-        <h1>Catsup !</h1>
-    </header>
-	<section class="container">
-        <div id="opening">A collection of collectibles of catsup the tomato-cat.</div>
-        <div id="gallery">
-            <img id="expandedImg" class="list-item-e" style="display: none;" src="" alt="!"/>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-01.webp"/>
-                <img class="list-item" src="images/S1-01.png" alt="Set 01 No. 1<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-02.webp"/>
-                <img class="list-item" src="images/S1-02.png" alt="Set 01 No. 2<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-03.webp"/>
-                <img class="list-item" src="images/S1-03.png" alt="Set 01 No. 3<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-04.webp"/>
-                <img class="list-item" src="images/S1-04.png" alt="Set 01 No. 4<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-05.webp"/>
-                <img class="list-item" src="images/S1-05.png" alt="Set 01 No. 5<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-06.webp"/>
-                <img class="list-item" src="images/S1-06.png" alt="Set 01 No. 6<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-07.webp"/>
-                <img class="list-item" src="images/S1-07.png" alt="Set 01 No. 7<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-08.webp"/>
-                <img class="list-item" src="images/S1-08.png" alt="Set 01 No. 8<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-09.webp"/>
-                <img class="list-item" src="images/S1-09.png" alt="Set 01 No. 9<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-10.webp"/>
-                <img class="list-item" src="images/S1-10.png" alt="Set 01 No. 10<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-11.webp"/>
-                <img class="list-item" src="images/S1-11.png" alt="Set 01 No. 11<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-12.webp"/>
-                <img class="list-item" src="images/S1-12.png" alt="Set 01 No. 12<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-13.webp"/>
-                <img class="list-item" src="images/S1-13.png" alt="Set 01 No. 13<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-14.webp"/>
-                <img class="list-item" src="images/S1-14.png" alt="Set 01 No. 14<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-15.webp"/>
-                <img class="list-item" src="images/S1-15.png" alt="Set 01 No. 15<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <picture>
-                <source type="image/webp" srcset ="images/S1-16.webp"/>
-                <img class="list-item" src="images/S1-16.png" alt="Set 01 No. 16<div class='shop-ex'>available on: <a class='line' href='https://line.me/S/sticker/4311120'>LINE</a>" onclick="pullImage(this);"/>
-            </picture>
-            <!-- <picture>
-                <source type="image/webp" srcset =""/>
-            </picture><img class="list-item" src="" alt="" onclick="pullImage(this);"/> -->
+  <header class="stick">
+    <!-- just an 'up' button, and an OnTop logo -->
+    <img class="htitle" src="images/title.png" >
+    <a class="linkblock" title="LINE Store" target="_blank" rel="noreferrer" href="https://store.line.me/stickershop/author/1140830/en" style="order:1;">LINE</a>
+    <a class="linkblock" href="" style="order:3;">Comic</a>
+  </header>
+  <div id="box">
+    <section style="margin-bottom: 32px;" class="stick">
+      <!-- Contents leading to comic; image and text to respresent it -->
+      <p>
+        Welcome to the catsup directory.<br>
+        <br>
+      </p>
+      <p>Catsup has a webcomic ! check it out !</p>
+      <div class="comicpost">
+        <img class="" src="images/comicthumb.jpg">
+        <div class="comicpost-desc" >
+          <p>"Catsup on Top" are comic diary entries from a girl named Pepper about her tomato-cat Catsup and their adventures.</p>
+          <div class="comicpost-linkblock">
+            <a class="clb-webtoons" href=""></a>
+            <a class="clb-tapas" href=""></a>
+          </div>
         </div>
-        <div id="focus" style="display: none;">
-            <!-- <img id="expandedImg" style="" /> -->
-            <div id="imgdesc"></div>
-        </div>
+      </div>
     </section>
-    <footer>
-        <!--    include an email to correspond  and a link back home, etc    -->
-        <a style="float: left;" href="https://www.alpha-zero.design/" target="_self">&crarr;RTN</a>
-        <a href="https://www.alpha-zero.design/contact.html" target="_self">alpha-zero ; automatic-spirit</a>
-    </footer>
-    <script>
-        function pullImage(imgs) {
-            var expandImg = document.getElementById("expandedImg");
-            var imgText = document.getElementById("imgdesc");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.style.display = "block";
-            imgText.parentElement.style.display ="block";
-            // expandImg.parentElement.style.display = "block";
-        }
-    </script>
+    <!-- <div class="butter"> -->
+      <!-- Slider main container -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <figure>
+                  <figcaption>
+                    <div class="linkrow">
+                      <a class="line-ext" title="LINE Store" target="_blank" rel="noreferrer" href="https://line.me/S/sticker/10016793"></a>
+                    </div>
+                  </figcaption>
+                  <img src="images/01SetS1.png">
+                </figure>
+              </div>
+              <div class="swiper-slide" style="">
+                <figure>
+                  <figcaption>
+                    <div class="linkrow">
+                      <a class="line-ext" title="LINE Store" target="_blank" rel="noreferrer" href="https://line.me/S/sticker/9979830"></a>
+                    </div>
+                  </figcaption>
+                  <img src="images/02SetE1.png">
+                </figure>
+              </div>
+              <div class="swiper-slide" style="">
+                <figure>
+                  <figcaption>
+                    <div class="linkrow">
+                      <a class="line-ext" title="LINE Store" target="_blank" rel="noreferrer" href="https://line.me/S/sticker/10008396"></a>
+                    </div>
+                  </figcaption>
+                  <img src="images/05SetS2.png">
+                </figure>
+              </div>
+              <div class="swiper-slide" style="">
+                <figure>
+                  <figcaption></figcaption>
+                  <img src="images/06SetS3.png">
+                </figure>
+              </div>
+              <div class="swiper-slide" style="">
+                <figure>
+                  <figcaption></figcaption>
+                  <img src="images/05SetS2.png">
+                </figure>
+              </div>
+              ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    <!-- </div> -->
+    <section class="stick">
+      <!-- Content leading to social media and other links. -->
+      <p>Above are sticker sets I've made available where I can.</p>
+      <p>I'm very supportive towards ideas about Catsup, if you have any ideas, talk to me !</p>
+      <div id="contactbar">
+        <a class="spritesh twitter" href="http://twitter.com/catsup_ontop" title="Catsup on Twitter"></a>
+        <a class="emailbar" href="mailto:automatic.spirit@gmail.com">email:automatic.spirit@gmail.com</a>
+      </div>
+      <div id="character-list">
+        <img src="images/catsup.png" title="Adventurous, energetic, tomato">
+        <img src="images/dobergine.png" title="Friendly, forgiving, aubergine">
+        <img src="images/bumpkin.png" title="Introvert, go-with-the-flow, pumpkin">
+      </div>
+    </section>
+  </div>
+  <footer class="stick">
+    <!-- credits, leads to main splash, and a fran button leading to his article on artstation -->
+    <div class="creditblock"><a href="http://alpha-zero.github.io">Catsup on top ! by alpha-zero</a></div>
+    <a href="" class="fran" style="z-index:99;" title="(A future link to) Learn about Fran"></a>
+  </footer>
+  <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+  <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
+  </script>
 </body>
 </html>
