@@ -1,7 +1,11 @@
 # main document files to ignore
 *.psd
 *.ai
+*.clip
+*.afdesign
+
 
 # ignore old folders (kept pretty much for just in case)
-*.old
 _old
+*.old
+*.old.*
