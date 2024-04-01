@@ -3,9 +3,11 @@
 /* CSS Document */
 
 :root {
-    --line-color: #C42D35;
+/*    --line-color: #C42D35;*/
+    --line-color: #74871D;
 
-    --border-width: 1px;
+    --border-width: 0px;
+    --border-type: solid;
 }
 
 a {text-decoration:none;}
@@ -53,15 +55,13 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: var(--border-width) solid var(--line-color);
+    border: var(--border-width) var(--border-type) var(--line-color);
     border-radius: .75em;
     box-shadow: 0 0em var(--line-color);
-
-    transition: filter 1s, opacity 1s, transform 1s, box-shadow 1s;
 }
 #gridbox{ width:100%; object-fit:contain; }
 /*        #gridbox picture { width:100%; object-fit:contain; }*/
-#gridbox > a {transition: filter .25s, opacity .25s, transform .25s, box-shadow .25s; }
+#gridbox > a {transition: filter .1s, opacity .1s, transform .1s, box-shadow .1s; }
 .doublewide { width: 100% !important; }
 .noback { background-color: rgba(255,255,255,0) !important; border-color: rgba(50,50,50,0.2)!important}
 
@@ -105,7 +105,7 @@ footer>a:hover, footer>a:focus {background-color: rgba(8,95,0,.2);}
 
 
 @media screen and (min-width: 320px){
-    :root { --border-width: 2px;}
+/*    :root { --border-width: 2px;}*/
     #gridbox > a {
         margin: 1em;
         width: 100%;
@@ -124,7 +124,7 @@ footer>a:hover, footer>a:focus {background-color: rgba(8,95,0,.2);}
 }
 
 @media screen and (min-width: 480px){
-    :root { --border-width: 2px;}
+/*    :root { --border-width: 2px;}*/
     body {background-size:300px;}
     #gridbox > a {
         width: calc(33.3% - 4em - calc(var(--border-width) * 2));
