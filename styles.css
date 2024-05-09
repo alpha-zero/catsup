@@ -4,7 +4,7 @@
 
 :root {
 /*    --line-color: #C42D35;*/
-    --line-color: #74871D;
+    --line-color: #6b800f;
 
     --border-width: 0px;
     --border-type: solid;
@@ -12,12 +12,10 @@
 
 a {text-decoration:none;}
 a, a:visited {color: black;}
-html {}
 body {
     padding: 0; margin: 0;
     width: 100%; height: 100%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    background-color: #fdfdfd;
 
     background-image: url("images/grassdrop.webp");
     background-size: 600px ;
@@ -57,7 +55,7 @@ body {
 
     border: var(--border-width) var(--border-type) var(--line-color);
     border-radius: .75em;
-    box-shadow: 0 0em var(--line-color);
+    box-shadow: 0 var(--line-color);
 }
 #gridbox{ width:100%; object-fit:contain; }
 /*        #gridbox picture { width:100%; object-fit:contain; }*/
